@@ -12,8 +12,12 @@ with open('/credentials/config.yaml','r') as file:
 print(config['username'])
 print(config['password'])
 
+print('old timestamp:')
+print(config['timestamp'])
+
 config['timestamp'] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 
+print('new timestamp:')
 print(config['timestamp'])
 
 with open('/credentials/config.yaml', 'w') as file:
