@@ -16,6 +16,6 @@ config['timestamp'] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 
 print(config['timestamp'])
 
-with open('config.yaml', 'w') as file:
+with open('/credentials/config.yaml', 'w') as file:
         yaml.dump(config, file, default_flow_style=False)
         
