@@ -2,8 +2,9 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 import yaml
+import os
 
-!ls
+os.system('ls')
 
 with open('config.yml','r') as file:
     config = yaml.safe_load(file)
