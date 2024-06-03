@@ -6,7 +6,7 @@ import os
 
 os.system('ls')
 
-with open('/credentials/config.yaml','r') as file:
+with open('config.yaml','r') as file:
     config = yaml.safe_load(file)
     
 print(config['username'])
@@ -20,6 +20,6 @@ config['timestamp'] = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
 print('new timestamp:')
 print(config['timestamp'])
 
-with open('/credentials/config.yaml', 'w') as file:
+with open('config.yaml', 'w') as file:
         yaml.dump(config, file, default_flow_style=False)
         
